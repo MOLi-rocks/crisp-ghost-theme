@@ -5,7 +5,20 @@
 	<div class="post-stamp">{{date published_at format='YYYY/MM/DD'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>{{#if featured}}<span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>{{/if}}</div>
 	<h1 class="post-title">{{title}}</h1>
 	{{content}}
-	{{> share}} 
-  {{> comments}}
-</article>  
+
+    <div class="container">
+        <div class="author clearfix">
+            {{#author}}
+            <h3>Author</h3>
+                <img src="{{image}}" alt="{{name}}" />
+                <div class="info">
+                    <a href="{{url}}" class="name">{{name}}</a>
+                    <p class="bio">{{bio}}</p>
+                </div>
+            {{/author}}
+        </div>
+    </div>
+    {{> share}}
+    {{> comments}}
+</article>
 {{/post}}
