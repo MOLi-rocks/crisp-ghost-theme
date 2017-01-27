@@ -1,3 +1,4 @@
+{{#if author.id}}
 <div class="container">
     <div class="list-author clearfix">
         {{#author}}
@@ -11,6 +12,7 @@
     </div>
 </div>
 <h3 class="post-title"></h3>
+{{/if}}
 {{#foreach posts}}
 <section id="{{id}}" class="{{post_class}}">
 	<h3 class="post-title"><a href="{{url}}">{{title}}</a><span class="separator"> &middot; </span>{{date published_at format='YYYY/MM/DD'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>{{#if featured}}<span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>{{/if}}</h3>
